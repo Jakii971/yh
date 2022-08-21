@@ -23,8 +23,7 @@ TOKEN = "BBFF-QGpKKAZQYQQRVveUVCjr87iCxzNMJP"  # Put your TOKEN here
 DEVICE_LABEL = "riil"  # Put your device label here 
 VARIABLE_LABEL_1 = "temperature"  # Put your first variable label here
 VARIABLE_LABEL_2 = "humidity"  # Put your second variable label here
-VARIABLE_LABEL_3 = "relay"
-VARIABLE_LABEL_4 = "ultrasonic"
+VARIABLE_LABEL_3 = "ultrasonic"
 
 
  
@@ -86,22 +85,6 @@ def humidity():
         humidity, temperature = Adafruit_DHT.read(DHT_SENSOR, PIN_DHT)
 
     return humidity
-
- 
-def relay():
-    # api setup
-    api = ApiClient(token='BBFF-G7bHXCDx1yl8uspx6CqH9ng1jla1Ea')
-    VARIABLE_LABEL_3 = api.get_variable("63006b41a0d47d000d429582")
-    status = VARIABLE_LABEL_3.get_values(1)
-    
-    # status off/on
-    print(status[0]['value'])
-
-    if status[0]['value']:
-        GPIO.setup(PIN_RELAY, GPIO.OUT)
-        GPIO.output(PIN_RELAY, GPIO.HIGH)
-    else:
-        GPIO.setup(PIN_RELAY, GPIO.IN)
     
 
 def build_payload(variable_1, variable_2, variable_3, variable_4):
