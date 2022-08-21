@@ -8,7 +8,6 @@ from ubidots import ApiClient
 
 
 PIN_DHT = 4
-PIN_RELAY = 27
 
 #set GPIO Pins
 GPIO_TRIGGER = 18
