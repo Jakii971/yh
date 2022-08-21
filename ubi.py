@@ -18,8 +18,8 @@ GPIO.setmode(GPIO.BCM)
 
 
 
-TOKEN = "BBFF-QGpKKAZQYQQRVveUVCjr87iCxzNMJP"  # Put your TOKEN here
-DEVICE_LABEL = "riil"  # Put your device label here 
+TOKEN = "BBFF-GCwMJyQ7J4FTgHeaY9KnFNZ1AZePIO"  # Put your TOKEN here
+DEVICE_LABEL = "Akuah"  # Put your device label here 
 VARIABLE_LABEL_1 = "temperature"  # Put your first variable label here
 VARIABLE_LABEL_2 = "humidity"  # Put your second variable label here
 VARIABLE_LABEL_3 = "ultrasonic"
